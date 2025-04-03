@@ -1,0 +1,26 @@
+
+p {color: #5c2a47;}
+
+body {background-color: rgb(252, 255, 223)}
+
+body {font-family: "Times new Roman",serif;}
+
+p {font-size: 1em }
+
+h1 {text-align:left }
+
+h1 {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    display:inline-block;
+    padding:5px;
+  }
+
+  h1 {
+    margin: 25px 50px 10px ;
+  }
+
+  div {
+    padding: 3px 3px ;
+  }
+  
