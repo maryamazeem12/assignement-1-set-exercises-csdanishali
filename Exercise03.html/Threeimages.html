@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            text-align: center;
+            font-size: medium;
+        }
+        img {
+           width: 400px ;
+           height: 300 ;
+           border-radius: 10px;
+           filter: brightness(80%) contrast(105%) grayscale(30%) saturate(120%) sepia(10%);
+           border: 1px solid #faf9fc;
+           box-shadow: 0px, 4px, 8px rgba(0,0,0, 0.2) ;
+        }
+        
+        img:hover{
+            transform: scale(1.05);
+           transition: transform 0.3s ease-in-out;
+           filter: brightness(100%) contrast(100%);
+        }
+        .license{
+        font-size: 14px;
+        color: #d8cdcd;
+        margin-top: 8px;
+        transition: color 0.3 ease;
+    }
+        .license a {
+        color: rgb(192, 180, 180);
+        transition:color 0.3s ease ;
+    }
+
+        .license a {
+        color: rgb(192, 180, 180);
+        text-decoration: underline;
+        transform: scale(1.05);
+    }
+        
+    </style>
+</head>
+<body>
+    <!--Heading-->
+    <h1 style="font-family:Georgia, 'Times New Roman', Times,serid;background: linear-gradient(to right, #051f7d,#3b0460,#3650ae ); color: #ddd9e6;
+    font-size: 2.5em; border: 1px solid white;">Starry Skies</h1>
+    <!--Image 1 with its its information and license-->
+    <div>
+        <img src="https://images.unsplash.com/photo-1610208956588-61f6c2e6136a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Purple Galaxy"
+        title="Purple Galaxy by Daniele Levis Pelusi on Unsplash">
+        <p class="license">
+            Image by <a href="https://unsplash.com/@yogidan2012">Daniele Levis Pelusi</a> on
+            <a href="https://unsplash.com/">Unsplash</a>,
+            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
+        </p>
+    <!--Image 2 with its its information and license-->
+        <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Milky Way Galaxy"
+        title="Milky Way in a Clear Night Sky">
+        <p class="license">
+            Image by <a href="https://unsplash.com/@nasa">NASA</a> on
+            <a href="https://unsplash.com/">Unsplash</a>,
+            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
+        </p>
+        <!--Image 3 with its its information and license-->
+        <img src="https://images.unsplash.com/photo-1643379840002-574002fbbd0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Purple Night Sky"
+        title="Purple Night Sky above Mountains">
+        <p class="license">
+            Image by <a href="https://unsplash.com/@malikshibly">Malik Shibly</a> on
+            <a href="https://unsplash.com/">Unsplash</a>,
+            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
+        </p>
+    </div>
+</body>
+</html>
