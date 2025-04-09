@@ -1,0 +1,120 @@
+ body{
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+  }
+   
+header{
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #f0f2f5;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0 ,0 ,0 ,0.1);
+  }
+header h1 {
+    margin: 0 ;
+    font-size: 2.5rem;}
+nav{ 
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0%;
+    padding: 1rem 0;
+  }
+nav li {
+    margin:  0 1.5rem;
+  }
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+nav a:hover{
+   color: #2575fc;
+  }
+main{ 
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.column{
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px black;
+    border-radius: 15px;
+    min-width: 280px ;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+.column:hover{
+    transform: translateY(-5px);
+  }
+.column h2{
+    color: #6a11cb;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+.column ul {
+    padding-left: 1rem;
+  }
+.column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+.column button{ 
+    margin-top:  1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background-color: #2575fc;
+    color: #ffffff;
+    border-radius:8px ;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.column button:hover{
+    background-color: #6a11cb;
+  }
+   
+footer{
+    background-color: #6a11cb;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem ;
+  }
+  
+
+
+
+
+
+ 
+  
+ 
+ 
+  
+ 
+  
+  
+  
+ 
+
+  
+  
+
+  
