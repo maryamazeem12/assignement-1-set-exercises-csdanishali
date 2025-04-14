@@ -1,0 +1,25 @@
+ /*paragraph styling*/
+p {color: #5c2a47;}
+p {font-size: 1em }
+/*body adjustments*/
+body {background-color: rgb(252, 255, 223)}
+
+body {font-family: "Times new Roman",serif;}
+/*heading adjustments*/
+h1 {text-align:left }
+
+h1 {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    display:inline-block;
+    padding:5px;
+  }
+
+  h1 {
+    margin: 25px 50px 10px ;
+  }
+/*div adjustments*/
+  div {
+    padding: 3px 3px ;
+  }
+  

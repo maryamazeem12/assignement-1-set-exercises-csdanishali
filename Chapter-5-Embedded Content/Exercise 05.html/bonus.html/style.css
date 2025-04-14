@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /*Background image adjustments*/
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/27/22/21/mixer-1284507_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    /*light color text and slightly blur effect*/
+    color: #fff;
+    backdrop-filter: blur(2px);/*softens the background*/
+}
+/*Tagline*/
+.tagline{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #ffe9ec;
+    /*add depth to text*/
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    font-style: italic;
+}
+/*Header*/
+header{
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 2rem;
+    color: #fff;
+    /*Stronger text shadow*/
+    text-shadow: 2px 2px#000;
+    /*Box adjustments*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-bottom: 3px solid crimson;
+}
+/*grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    /*Centers the grid*/
+    margin: auto;
+}
+  /*Sample*/
+.sample{
+    /*Light Background*/
+    background: rgba(225, 255, 255, 0.15);
+    border:  2px solid  rgba(225, 255, 255, 0.25);
+    border-radius: 20px ;
+    padding: 20px;
+    /*effects for sample*/
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, background 0.3s;
+    animation: fadeIn 0.8s ease forwards;
+}
+  /*Hover Effect*/
+.sample:hover {
+    /*Poping effect*/
+     transform: scale(1.05);
+     /*Light Backgrond*/
+     background:  rgba(225, 255, 255, 0.3);
+     /*Change in text color on hover*/
+     color: #000;
+     cursor: pointer;
+}
+
+/*Text in sample card*/
+.sample p {
+    font-size: 1.3rem ;
+    font-weight: bold;
+    margin:  10px 0 15px;
+    text-shadow: 1px 1px #000;
+}
+  /*Audio player*/
+ audio { 
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 6px;
+    transition: border 0.3s ease, box-shadow 0.3s;
+}
+  /*Audio player adjustments on hover*/
+.sample:hover audio {
+    border-image: linear-gradient(45deg, #ff0000, #ff7300, #ffe600, #47ff00, #00ffee) 1;
+    /*Glowing box shadow*/
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.6) ;
+}
+  
+ 
+  

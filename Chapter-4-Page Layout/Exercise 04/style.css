@@ -1,0 +1,124 @@
+
+body { margin:0;
+font-family: Arial, Helvetica, sans-serif;
+color: #3c003c;
+/*light background*/
+background-color: #fff9f5;}
+
+/*headings styling*/
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /*bold heading*/
+  font-weight: 700 ;
+}
+/*header*/
+header{
+  /*deep background*/
+  background-color: #3c003c;
+  /*light text*/
+  color: #fff0f5;
+  text-align: center ;
+  padding: 20px 0;
+}
+ /*h1 heading*/
+h1 {
+  margin: 0;
+  text-decoration: underline;
+ }
+ /*nav bar adjustments*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+/*nav links*/
+nav ul li a {
+  color: #f6c1d4;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  padding:  30px;
+  /*space between coloumns*/
+  gap: 20px;
+}
+/*left section*/
+.left{
+  width: 70%;
+  box-sizing: border-box;
+}
+/*left section heading*/
+.left h2{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+/*left section paragraph*/
+.left p {
+  font-size: 1em;
+  margin: 20px 0;
+}
+/*left section image*/
+.left img {
+  width:100%;
+  max-width: 600%;
+  height: auto;
+  border-radius: 10px;
+}
+/*right section*/
+.line {
+  width: 70%;
+  background-color: #eec7d7;
+  color: #3c003c;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+}
+/*heading line*/
+.line h3 {
+  margin: 0 20px 0;
+  margin-top: 5px;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+/*lists inside line*/
+.line ul{
+  list-style: none;
+  padding-left: 10px;
+  margin: 20px 0;
+}
+
+.line li{
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+/*image in line*/
+.line .images {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.line .images img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/*footer adjustments*/
+footer{
+  background-color: #b45fa0;
+  color: #ffffff;
+  text-align: center;
+  padding:  15px 0;
+}
+
