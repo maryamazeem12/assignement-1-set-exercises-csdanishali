@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title for website-->
+    <title> 🎨 RGB Color Guessing Game</title>
+    <!--linking external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="game-container"><!--Game-container-->
+    <h1><b> 🎯RGB Color Game</b></h1>  <!--heading-->
+    <p class="tagline">Guess the correct color from the RGB code!</p><!--tagline for user to understand the game-->
+  
+    <div class="display-panel">  <!--shows rgb value and lives-->
+        <p id="rgbDisplay"> RGB(?, ?, ?)</p>  <!--RGB code to guess-->
+        <div class="stats"> <!--Scores and llives-->
+            <span> 🎯 Score: <span id="score">0</span></span>
+            <span> ❤️ Lives: <span id="lives">3</span></span>
+        </div>
+        <!--selection-->
+        <select id="difficultySelect">
+            <option value="3">Easy (3 options)</option>
+            <option value="6" selected>Medium (6 options)</option>
+            <option value="9">Hard (9 options)</option>
+        </select>
+    </div>
+    <!--Grid where the color boxes will appear-->
+    <div class="color-grid" id="colorGrid">
+    </div>
+
+    <div id="gameOverModal">
+        <!--title-->
+        <h2>Game Over 🎮</h2>
+        <!--final score-->
+        <p id="final"> Your score:0</p>
+        <!--restart game button-->
+        <button id="playAgainBtn">Play Again 🔄</button>
+    </div>
+    <!--linking external javascript-->
+    <script src = "index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Title for website-->
+    <title>Petrol Calculator</title>
+    <!--Linking external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Container for styling and layout-->
+    <div class="container">
+        <!--heading-->
+        <h1>⛽Petrol Calculator</h1>
+        <!--Tagline-->
+        <p class="tagline">Calculate fuel cost, distance & go the extra mile 🚗</p>
+        <!--Dark mode Toggle-->
+        <div class="toggle-switch">
+            <label>
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span> Dark mode
+            </label>
+        </div>
+        <!--Wrapper for styling-->
+        <div class="wrapper">
+        <div>
+            <!--user enter the price per liter-->
+            <label for="Petrol_Price">Petrol Price (AED/L):</label><br>
+            <input type="number" id="Petrol_Price" value="1.72" step="0.01"> <!--defines decimal input-->
+        </div>
+        <div>
+            <!--user enters how many liters they bought-->
+            <label for="Litres">Litres Purchased:</label><br>
+            <input type="number" id="Litres" value="0" step="0.1">
+        </div>
+    </div>
+   <!--Button-->
+    <div id="btn">
+        <!--tells the user the total cost and distance calculation-->
+        <button id="calcBtn">Calculate</button>
+        <!--resets input-->
+        <button id="resetBtn" class="reset">Reset</button>
+    </div>
+    <!--Results-->
+    <div>
+        <!--shows calculated fuel cost and estimated distance-->
+    <p class="output">Total Amount: AED <span id="totalAmount">0.00</span></p>
+    <p class="output">Estimated Distance: <span id="distance">0.00</span>km</p>
+    </div>
+</div>
+    <!--Connects html to your enternal javascript file-->
+    <script src ="javascript.js"></script>
+</body>
+</html>
