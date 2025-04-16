@@ -4,85 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Linking internal stylesheet-->
-    <!--heading--> 
+    <!--title for website--> 
     <title>Galaxy</title>
+    <!--styling-->
     <style>
-        /*Box styling*/
+        /*adjustments for margin, padding, and box-sizing*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /*body adjustments*/
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: black;
+            font-family: 'Segoe UI', sans-serif ;
+            /*dark background*/
+            background: linear-gradient(to bottom right, #050014, #1a0025);
+            /*white text color*/
+            color: #fff;
+            /*prevents horizontal scrolling*/
+            overflow-x: hidden;
+            position: relative;
+
+        }
+        /*header scetion*/
+        header{
+            /*align in center*/
             text-align: center;
-            font-size: medium;
+            padding: 40px 20px;
+            background: linear-gradient(145deg, #9d4edd, #5a189a);
+            border-bottom: 2px solid #3c096c;
+            /*subtle shadow for depth*/
+            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
         }
-        /*image adjustments*/
-        img{
-            width: 400px;
-            height: 300px;
-            border-radius: 10px;
-            /*this makes image full black and white*/
+        /*header h1*/
+        header h1{
+            /*large font size*/
+            font-size: 3.2em;
+            /*white font*/
+            color: #fff;
+            text-shadow: 0 0 15px #c77dff;
+            animation: pulse 3s infinite;
+        }
+        /*animation for header*/
+        @keyframes pulse{
+            0% {text-shadow: 0 0 10px #c77dff;}
+            50%{text-shadow:  0 0 25px #e0aaff;}
+            100%{text-shadow: 0 0 10px #c77dff;}
+        }
+        /*gallery section adjustments*/
+        .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+        gap: 30px;
+        padding: 50px 10%;
+        }
+        /*image card adjustments*/
+        .image-card{
+            position: relative;
+            /*round corners*/
+            border-radius: 20px;
+            overflow: hidden;
+            /*soft shadow*/
+            box-shadow:  0 10px 30px rgba(186, 104, 255, 0.2);
+            /*smooth transition*/
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            /*blur effect for background*/
+            backdrop-filter: blur(10px);
+        }
+        /*hover effect for image card*/
+        .image-card:hover{
+            transform: translateY(-8px);
+            box-shadow:  0 15px 40px rgba(174, 113, 255, 0.6);
+        }
+        /*image styling*/
+        .image-card img{
+            width: 100%;
+            /*fixed height*/
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #c77dff33;
+            transition: all 0.4s ease;
+            /*make image black and white*/
             filter: grayscale(100%);
-            border: 1px solid #faf9fc;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-            transition:  all 0.3s ease-in-out;
-
         }
-        img:hover{
-            transform: scale(1.05);
-            /*no filter*/
-            filter: none;
+        /*image hover effect*/
+        .image-card img:hover{
+            /*removes grayscale*/
+            filter: grayscale(0%);
+            transform: scale(1.03);
         }
-
-        /*image license*/
-        .license{
-        font-size: 14px;
-        color: #d8cdcd;
-        margin-top: 8px;
-        transition: color 0.3 ease;
-    }
-        /*fix transition*/
-        .license a {
-        color: rgb(192, 180, 180);
-        transition:color 0.3s ease ;
-    }
-        .license a {
-        color: rgb(192, 180, 180);
-        text-decoration: underline;
-        transform: scale(1.05);
-    }
-    </style>
+        /*caption adjustments*/
+        .caption{
+            padding: 15px;
+            font-size: small;
+            color:#e0e0e0;
+            text-align: center;
+        }
+        /*link styling*/
+        .caption a {
+            color: #caa8f5;
+            text-decoration: none;
+        }
+        /*hover effect*/
+        .caption a:hover{
+            color: #fff;
+            text-decoration: underline;
+        }
+        /*lightbox styling*/
+        .lightbox{
+            position: fixed;
+            top: 0;
+            left: 0;
+            /*full screen width*/
+            width: 100vw;
+            /*full screen height*/
+            height: 100vh;
+            /*dark background*/
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        /*when the lightbox is visible*/
+        .lightbox.show{
+            visibility: visible;
+            /*for visibility*/
+            opacity: 1;
+        }
+        /*image inside the lightbox*/
+        .lightbox img{
+            max-width: 90%;
+            max-width: 80%;
+            /*round corners*/
+            border-radius: 15px;
+            box-shadow:  0 0 30px #c77dff;
+        }
+        /*shooting star effect*/
+        .shooting-star{
+            position: fixed;
+            top: 20%;
+            left: -100px;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, white, rgba(255, 255, 255,0));
+            opacity: 0;
+            transform: rotate(0deg);
+            animation: shoot 5s linear infinite;
+            z-index: 0;
+        }
+        /*shooting star animation*/
+        @keyframes shoot{
+            /*comes from left effect*/
+            0%{
+                transform: translateX(0);
+                opacity: 0;
+            }
+            /*make it visible*/
+            10%{
+                opacity: 1;
+            }
+            /*fade effect*/
+            50%{
+                opacity: 0.7;
+            }
+            /*moves across the screen*/
+            100%{
+                transform: translateX(110vw);
+                opacity: 0;
+            }
+        }
+        </style>
 </head>
 <body>
-    <!--Heading-->
-    <h1 style="font-family:Georgia, 'Times New Roman', Times,serid;background: linear-gradient(to right, #545353,#191919,#100245 ); color: #ddd9e6;
-    font-size: 2.5em; border: 1px solid white;">Starry Skies</h1>
-    <!--Image 1 with its its alt, title and license-->
-    <div>
-        <img src="https://images.unsplash.com/photo-1610208956588-61f6c2e6136a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Purple Galaxy"
-        title="Purple Galaxy by Daniele Levis Pelusi on Unsplash">
-        <p class="license">
-            Image by <a href="https://unsplash.com/@yogidan2012">Daniele Levis Pelusi</a> on
-            <a href="https://unsplash.com/">Unsplash</a>,
-            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
-        </p>
-    <!--Image 2 with its its alt, title and license-->
-        <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Milky Way Galaxy"
-        title="Milky Way in a Clear Night Sky">
-        <p class="license">
-            Image by <a href="https://unsplash.com/@nasa">NASA</a> on
-            <a href="https://unsplash.com/">Unsplash</a>,
-            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
-        </p>
-        <!--Image 3 with its its alt, title and license-->
-        <img src="https://images.unsplash.com/photo-1643379840002-574002fbbd0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Purple Night Sky"
-        title="Purple Night Sky above Mountains">
-        <p class="license">
-            Image by <a href="https://unsplash.com/@malikshibly">Malik Shibly</a> on
-            <a href="https://unsplash.com/">Unsplash</a>,
-            license under the <a href="https://unsplash.com/license">Unspalsh license</a>.
-        </p>
+    <header>
+        <!--heading-->
+        <h1>Starry Skies 🌌</h1>
+    </header>
+    <!--shooting star-->
+    <div class="shooting-star"></div>
+    <!--Image gallery-->
+    <div class="gallery">
+        <!--image card 1-->
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1610208956588-61f6c2e6136a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"alt="purple galaxy" onclick="openLightbox(this)">
+            <div class="caption">
+                <!--image info-->
+                Image by <a href="https://unsplash.com/@yogidan2012">Daniele Levis Pelusi</a> on 
+                <a href="https://unsplash.com">Unsplash</a>
+                license under <a href="https://unsplash.com/license">Unspalsh license</a>.
+            </div>
+        </div>
+        <!--image card 2-->
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?q=80&w=2099&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"alt="Milky Way" onclick="openLightbox(this)">
+             <!--image info-->
+            <div class="caption">
+                Image by <a href="https://unsplash.com/@nasa">NASA</a> on
+                <a href="https://unsplash.com">Unsplash</a>
+                license under <a href="https://unsplash.com/license">Unspalsh license</a>.
+            </div>
+        </div>
+        <!--image card 3-->
+        <div class="image-card">
+            <img src="https://images.unsplash.com/photo-1643379840002-574002fbbd0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"alt="Night sky" onclick="openLightbox(this)">
+            <!--image info-->
+            <div class="caption">
+                Image by <a href="https://unsplash.com/@malikshibly">Malik Shibly</a> on
+                <a href="https://unsplash.com/">Unsplash</a>
+                license under <a href="https://unsplash.com/license">Unspalsh license</a>.
+            </div>
+        </div>
     </div>
+    <!--lightbox for full image view-->
+    <div class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full View">
+    </div>
+    <!--when the image is clicked this function open the lightbox-->
+    <script>
+        function openLightbox(img){
+            const lightbox = document.querySelector('.lightbox');
+            const lightboximg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.classList.add('show');
+        }
+        /*this function will close the lightbox when clicked*/
+        function closeLightbox(){
+            document.querySelector('lightbox').classList.remove('show');
+        }
+    </script>
 </body>
 </html>
