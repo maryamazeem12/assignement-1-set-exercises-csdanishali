@@ -6,387 +6,195 @@
     <title>HTML & CSS quick-refrence guide</title>
     <!--Linking external stylesheet-->
     <link rel="stylesheet" href="style.css"
-    <header>
-        <!--Main Heading-->
-        <h1>
-            HTML & CSS Quick-Refrence Guide
-        </h1>
+</head>
+<body>
+    <header><!--Main Heading-->
+        <h1>HTML & CSS Quick-Refrence Guide</h1>
+        <!--tagline-->
+        <p class="intro">A beginner-friendly Guide to essential tags and properties</p>
     </header>
-    <P>
-        Here we will learn some HTML tags and CSS properties
-    </P>
-    <div>
-    <!--HTML Tags Heading-->
-    <H2>
-        HTML Tags
-    </H2>
-    <!--Heading Tag-->
-    <ul>
-        <li>
-    <h3>
-        Heading Tag
-    </h3>
-</li></ul>
-    <!--Defination-->
-    <p>
-        This tag is used to create titles or headings.<br>
-        <code>
-            &lt;H1&gt;
-        </code>is for big headings,
-        <code>&lt;H6&gt;
-        </code>is for small text
-    </p>
-     <!--Example-->
-    <pre><code><b>Example:-</b>&lt;H1&gt;This for big heading&lt;/H1&gt;</code></pre>
 
-    <ul>
-        <li>
-    <H3>
-        <!--Paragrapgh Tag-->
-        Paragraph Tag
-    </H3>
-</li></ul>
-    <p>
-        <!--Defination-->
-        This tag defines a paragraph<br>
-        <!--Example-->
-        <pre><code><b>Example:-</b>&lt;p&gt;Html stands for hyper text markup language&lt;/p&gt;
-            </code></pre>
-    </p>
+    <section class="definition">
+       <!--HTML defination-->
+    <h2>What is HTML?</h2>
+    <p>HTML (HyperText Markup language) is used to structure content on the web.It uses "tags" to define elements like headings, paragraphs, links, and more.</p>
+    </section>
 
-    <ul>
-        <li><h3>
-            <!--Italic Text Tag-->
-            Italic Text Tag
-        </h3>
-    </li></ul>
-        <p>
-            <!--Defination-->
-            This tag makes the text italic<br>
-             <!--Example-->
-            <pre><code><b>Example:-</b>&lt;i&gt;She loves Chocolates&lt;/i&gt;
-            </code></pre>
-        </p>
+    <section class="tags">
+        <!--Html Tags-->
+        <h2>Common HTML Tags</h2>
+        <div class="code-section">
+        <article>
+            <!--heading tag-->
+            <h3>1. Heading Tag</h3>
+            <p>Used for defining headdings from largest(&lt;h1&gt;) to smallest (&lt;h6&gt;).</p>
+            <!--example-->
+            <pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;</code></pre>
+        </article>
+    </div>
+
+        <article>
+            <!--paragraph tag-->
+            <H3>2. Paragraph Tag</H3> 
+            <p>This tag defines a paragraph</p>
+            <!--example-->
+            <pre><code>&lt;p&gt;This is a paragrapgh&lt;/p&gt;</code></pre>
+        </article>
         
+        <article>
+            <!--anchor tag-->
+            <h3>3. Anchor Tag</h3>
+            <p> This tag is used to create hyperlink.</p>
+            <!--example-->
+            <pre><code>&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</code></pre>
+        </article>
 
-    <ul>
-        <li><h3>
-            <!--Bold Text Tag-->
-            Bold Text Tag
-        </h3></li>
-    </ul>
-    <p>
-         <!--Defination-->
-        This tag makes the text bold<br>
-        <!--Example-->
-        <pre><code><b>Example:-</b>&lt;b&gt;She loves dancing&lt;/b&gt;
-        </code></pre>
-    </p>
+        <article>
+            <!--image tag-->
+            <h3>4. Image Tag</h3>
+            <p> This tag displays a image.</p>
+            <!--example-->
+            <pre><code>&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+        </article>
 
-    
-    <ul>
-        <!--Line Text Tag-->
-        <li><h3>
-            Line Break Tag
-        </h3></li>
-    </ul>
-    <p>
-        <!--Defination-->
-        This tag is to create a break in the line of text<br>
-         <!--Example-->
-        <pre><code><b>Example:-</b>line&lt;br&gt;break
-        </code></pre>
-    </p>
-
-    <!--Code Tag-->
-    <ul>
-        <li>
-            <h3>Code Tag</h3>
-        </li>
-    </ul>
-    <p>
-         <!--Defination-->
-        This tag displays a code.<br>
-        <!--Example-->
-        <pre><code><b>Example:-</b>&lt;code&gt;Hello World&lt;/code&gt;
-        </code></pre>
-    </p>
-
-    <!--Ordered Lists Tag-->
-    <ul>
-        <li>
-            <h3>
-                Ordered Lists Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-         <!--Defination-->
-        This tag creates a lists with numbers.<br>
-        <!--Example-->
-        <pre><code><b>Example:-</b>
-            &lt;ol&gt;
-            &lt;li&gt;Sara&lt;/li&gt;
-            &lt;li&gt;Ahmed&lt;/li&gt;
-            &lt;/ol&gt;
-        </code></pre>
-    </p>
-
-    <!--Unordered Lists Tag-->
-    <ul>
-        <li>
-            <h3>Unordered Lists Tag</h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag creates a lists with bullet points.<br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>
+        <article>
+            <!--unordered tag-->
+        <h3>5. Unordered Lists</h3>
+        <p>This tag creates a lists with bullet points.</p>
+        <!--example-->
+        <pre><code>
             &lt;ul&gt;
             &lt;li&gt;Cats&lt;/li&gt;
             &lt;li&gt;Dogs&lt;/li&gt;
             &lt;/ul&gt;
         </code></pre>
-    </p>
+    </article>
 
-    <!--Image Tag-->
-    <ul>
-        <li>
-            <h3>Image Tag</h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag displays a image.<br>
-     <!--Example-->
-        <pre><code><b>Example:-</b>&lt;<img src="https://i.pinimg.com/474x/38/d0/00/38d00075107aa881ec9cb49213c53b3d.jpg" height="100" width="90"alt="">&gt;
+
+    <article>
+         <!--ordered tag-->
+        <h3>6.Ordered Lists</h3>
+        <p>This tag creates a lists with numbers.</p>
+        <!--example-->
+        <pre><code>&lt;ol&gt;
+            &lt;li&gt;Sara&lt;/li&gt;
+            &lt;li&gt;Ahmed&lt;/li&gt;
+            &lt;/ol&gt;
         </code></pre>
-    </p>
-    
-    <!--Anchor tag-->
-    <ul>
-        <li>
-            <h3>Anchor tag</h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to create hyperlink.<br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;a href="https://www.google.com"&gt;Link to google&lt;/a&gt;
-        </code></pre>
-    </p>
+    </article>
 
-    <!--Audio tag-->
-    <ul>
-        <li>
-            <h3>
-                Audio tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-         <!--Defination-->
-    This tag is used to add sound content on website.<br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;audio controls src="Sound Effect.mp3"&gt;&lt;/audio&gt;
+    <article>
+        <!--bold text-->
+        <h3>7.Bold Text</h3>
+        <p>This tag makes the text bold</p>
+        <!--example-->
+        <pre><code>&lt;b&gt;Bold text&lt;/b&gt;</code></pre>
+    </article>
 
-        </code></pre>
-    </p>
+    <article>
+        <!--italic text-->
+        <h3>8.Italic Text</h3>
+        <p>This tag makes the text italic.</p>
+        <!--example-->
+        <pre><code>&lt;i&gt;Italic text&lt;/i&gt;</code></pre>
+    </article>
 
-    <!-- Video Tag-->
-    <ul>
-        <li>
-            <h3>
-                Video Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to add video on webiste.<br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;video controls src="Video.mp3"&gt;&lt;/video&gt;
-        </code></pre>
-    </p>
+    <article>
+        <!--break tag-->
+        <h3>9. Break Tag</h3>
+        <p>This tag is to create a break in the line of text</p>
+        <!--example-->
+        <pre><code>line 1&lt;br&gt;Line 2</code></pre>
+    </article>
 
-    <!--Form Tag-->
-    <ul>
-        <li>
-            <h3>
-                Form Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to create a form for user input<br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>
-          &lt;form&gt;
+    <article>
+        <!--form tag-->
+        <h3>10.Form tag</h3>
+        <p>This tag is used to create a form for user input</p>
+        <!--example-->
+        <pre><code>
+            &lt;form&gt;
           &lt;label for=&gt;"123"Email &lt;/label&gt;
           &lt;input id="123" type="text" placeholder="Email"&gt;
           &lt;/form&gt;
         </code></pre>
-    </p>
+    </article>
+    </section>
+    <!--CSS definition-->
+    <section class="definition">
+        <h2>What is CSS?</h2>
+        <p>CSS (Cascading Style Sheets) is used to style Html content. It controls layout, color, font, spacing and much more.</p>
+    </section>
+    <section class="tags">
+        <!--css properties-->
+        <h2>Common CSS Properties</h2>
+        <!--color-->
+        <article>
+            <h3>1. Color</h3>
+            <!--example-->
+            <pre><code>p {color: #5c2a47; }</code></pre>
+        </article>
 
-    <!--Div Tag-->
-    <ul>
-        <li>
-            <h3>
-                Div Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to organize components in webpage <br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;div&gt;&lt;h5&gt;About me&lt;/h5&gt;&lt;p&gt;i am 18 years old&lt;/p&gt;&lt;/div&gt;
-        </code></pre>
-    </p>
+        <!--Background Color-->
+        <article>
+            <h3>2. Background Color</h3>
+            <!--example-->
+            <pre><code>body {background-color:rgb(252, 255, 223)}</code></pre>
+        </article>
 
-    <!--Article Tag-->
-    <ul>
-        <li>
-            <h3>
-                Article Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to represent independent piece of content <br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;article&gt;&lt;h4&gt;Article Title&lt;/h4&gt;&lt;p&gt;---&lt;/p&gt;&lt;/article&gt;
-        </code></pre>
-    </p>
+        <!--Font Family-->
+        <article>
+            <h3>3. Font Family</h3>
+            <!--example-->
+            <pre><code>body {font-family: "Times new Roman",serif;}</code></pre>
+        </article>
 
-    <!-- Footer Tag-->
-    <ul>
-        <li>
-            <h3>
-                Footer Tag
-            </h3>
-        </li>
-    </ul>
-    <p>
-        <!--Defination-->
-    This tag is used to represent the bottom of a webpage <br>
-    <!--Example-->
-        <pre><code><b>Example:-</b>&lt;footer&gt;My Website&lt;/footer&gt;
-        </code></pre>
-    </p>
-</div>
-    <div>
-        <!--CSS Properties-->
-    <H2>
-        CSS Properties
-    </H2>
-    <!--Color Text-->
-    <ul>
-        <li>
-            <h3>
-                Color Text
-            </h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>This changes the font color</p>
-    <!--Example-->
-    <pre><code>p {color: #5c2a47;}</code></pre>
+        <!--Font Size-->
+        <article>
+            <h3>4.Font Size</h3>
+            <!--example-->
+            <pre><code>p {font-size: 1em; }</code></pre>
+        </article>
 
-    <!--Background Color-->
-    <ul>
-        <li>
-            <h3>Background Color</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>This changes the background color</p>
-    <!--Example-->
-    <pre><code>body {background-color:rgb(252, 255, 223)}</code></pre>
+        <!--Text Align-->
+        <article>
+            <h3>5. Text Align</h3>
+            <!--example-->
+            <pre><code>h1 {text-align:left; }</code></pre>
+        </article>
 
-    <!--Font Family-->
-    <ul>
-        <li>
-            <h3>Font Family</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>Changes the text of the font</p>
-    <!--Example-->
-    <pre><code>body {font-family: "Times new Roman" ,serif;}</code></pre>
+        <!--Border-->
+        <article>
+            <h3>6. Border</h3>
+            <!--example-->
+            <pre><code>h1 {
+                border: 2px solid rgb(0, 0, 0);
+                padding:5px;</code></pre>
+        </article>
 
-    <!--Font Size-->
-    <ul>
-        <li>
-            <h3>Font Size</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>Changes the size of the font</p>
-    <!--Example-->
-    <pre><code>p {font-size: 1em}</code></pre>
+        <!-- Margin-->
+        <article>
+            <h3>7. Margin</h3>
+            <!--example-->
+            <pre><code>h1 {margin: 25px; }</code></pre>
+        </article>
 
-    <!--Text Align-->
-    <ul>
-        <li>
-            <h3>Text Align</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>Changes the position of the text</p>
-    <!--Example-->
-    <pre><code>h1 {text-align:left }</code></pre>
-
-    <!--Border-->
-    <ul>
-        <li>
-            <h3>Border</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>sets a border around a text</p>
-    <!--Example-->
-    <pre><code>h1 {
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    display:inline-block;
-    padding:5px;
-      }</code></pre>
-
-      <!--Margin-->
-    <ul>
-        <li>
-            <h3>Margin</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>Margins are used to create space around a elements border</p>
-    <!--Example-->
-    <pre><code>h1 {
-        margin: 25px 50px 10px ;
-      }</code></pre>
-
-      <!--Padding-->
-    <ul>
-        <li>
-            <h3>Padding</h3>
-        </li>
-    </ul>
-    <!--Defination-->
-    <p>This creates an extra space within an element</p>
-    <!--Example-->
-    <pre><code>div {
-        padding: 3x 3px;
-      }</code></pre>
-</div>
-</head>
-<body>
-    
+        <!--Padding-->
+        <article>
+            <h3>8. Padding</h3>
+            <!--example-->
+            <pre><code>div {padding: 3x 3px;} </code></pre>
+        
+        </article>
+    </section>
+    <!--footer for website-->
+    <footer>
+        <p>Created as a learning guide for HTML & CSS beginners</p>
+    </footer>
 </body>
 </html>
 
 
+
+
+    
